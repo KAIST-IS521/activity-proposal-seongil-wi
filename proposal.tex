@@ -5,6 +5,7 @@
 \usepackage{hyperref}
 \usepackage{amsthm}
 \usepackage[numbers,sort&compress]{natbib}
+\usepackage{indentfirst}
 
 \theoremstyle{definition}
 \newtheorem{exercise}{Exercise}
@@ -12,44 +13,50 @@
 \begin{document}
 %%% Header starts
 \noindent{\large\textbf{IS-521 Activity Proposal}\hfill
-                \textbf{Your Name}} \\
-         {\phantom{} \hfill \textbf{GitHub ID}} \\
+                \textbf{Wi Seong Il}} \\
+         {\phantom{} \hfill \textbf{seongil-wi}} \\
          {\phantom{} \hfill Due Date: April 15, 2017} \\
 %%% Header ends
 
 \section{Activity Overview}
-
-Briefly describe what this activity is about, and \emph{why} you are
-proposing this activity. (활동에 대한 간략한 설명과 왜 이 활동을
-제안하는지에 대한 이유를 서술.)
-
+  \subsection{활동에 대한 설명}
+  주어진 Software Sample 코드에 대하여 Secure Coding에 의거하여 직접 취약한 부분을 찾아내고, 이에 따라 scanning solution을 제안 및 제작해 보는 것.
+  \subsection{이 활동을 제안하는 이유}
+   근간에 취약점 공격은 인프라가 갖추어져 있는 네트워크나, 시스템 보다 Application Level에서의 공격이 주를 이루고 있는 상황이다.\cite{Application}
+   일반적인 engineering의 단계는 기본적으로 Requirement Specification, Design, Implement, Verification, Release순으로 이루어 진다. Release이후에 발견되는 보안상 취약점을 고치기 위해 드는 Overhead가 매우 큼을 감안하여, Engineering의 초기 단계부터 보안적 요소를 점검하고, 고쳐나가야 할 필요성을 이 활동을 통해 드러내고자 한다. 특별히, 수동적인 검사활동과 함께 후에 자동적으로 Detect해주는 Solution을 Organize함으로써 보안적인 접근방법을 익혀보는 것을 목표로 한다.
 \section{Exercises}
 
-Describe a series of exercises that students will carry out. (학생들이 하게
-될 연습문제를 순차적으로 서술.)
-
 \begin{exercise}
-
-  In this exercise, you do ...
+ 
+  취약한 Software Sample코드를 제시하여 수강자들로 하여금 취약점을 공격하는 활동을 제안한다. 자신이 보고 탐지하기에 가능한 공격들을 모두 찾고, 그에 따라 공격코드나, script를 쓰도록 한다.
 
 \end{exercise}
 
 \begin{exercise}
 
-  In this exercise, you do ...
+  취약한 Software Sample코드를 제시하여 수강자들로 하여금 어떠한 부분이 취약한지 찾아서 고치는 활동을 제안한다. 다음 링크\cite{Standard}는 CERT에서 제안하는 C language 시큐어코딩의 standard이다. 이를 참고하여 및 응용하여 주어진 코드상에서 취약점을 정적으로 분석하도록 한다.
+  고친부분에는 주석으로 왜 이 부분을 고쳤고, 어떤 공격이 가능한지 기술하도록 한다.
 
 \end{exercise}
 
 \begin{exercise}
 
-  In this exercise, you do ...
+  주어진 Sample코드 중에서 취약성으로 인해 고친 부분을 참고하여 취약점을 Detect할 수 있는 Solution을 제시하는 것. (Compiler의 요소들을 활용하는 것도 하나의 방법이 될 것 임) 나온 Output은 기존의 취약한 Software Sample코드를 scanning할 때 본인이 찾았던 취약한 코드들을 자동적으로 Detect할 수 있어야 함. 
 
 \end{exercise}
 
 \section{Expected Solutions}
-
-Put expected solutions here.
-(예상되는 답안에 대해서 서술.)
+  \subsection{Milestone}
+   \begin{itemize}
+      \item Attacking Code
+      \item Defense Code(Secure Coding Code)
+	  \item Solution
+   \end{itemize}
+  \subsection{목표}
+   \begin{itemize}
+      \item Software의 보안상 취약점으로 인하여 어떤 피해가 발생하는지 부분적으로 알고, 문제가 심화될 경우 심각 할 수 있음을 깨닫는 것.
+      \item 이에 따라 Engineering의 초기 단계부터 보안적 요소를 가미하는 것이 중요함을 깨닫는 것.
+   \end{itemize}
 
 \bibliography{references}
 \bibliographystyle{plainnat}
